@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Comic Story Creator</title>
+</head>
+
+<body>
+
+    <h1>AI Comic Story Creator</h1>
+    <p>Powered by Gemini Models</p>
+
+    <form method="POST">
+
+        <label>Story Idea:</label><br>
+        <textarea name="prompt" required></textarea><br><br>
+
+        <label>Main Character:</label><br>
+        <input type="text" name="character" required><br><br>
+
+        <label>Setting:</label><br>
+        <input type="text" name="setting" required><br><br>
+
+        <label>Tone:</label><br>
+        <select name="tone">
+            <option>Adventure</option>
+            <option>Funny</option>
+            <option>Fantasy</option>
+            <option>Mystery</option>
+            <option>Friendship</option>
+        </select><br><br>
+
+        <button type="submit">Generate Comic Story</button>
+
+    </form>
+
+    {% if story %}
+        <h2>Generated Comic Story</h2>
+        <pre>{{ story }}</pre>
+    {% endif %}
+
+</body>
+</html>
